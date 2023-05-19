@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+.formfrom{
+    width:300px;
+    height:500px;
+    margin: auto;
+    border:5px solid black;
+    padding:20px;
+    background-color:goldenrod ;
+    text-align: center;
+    
+}
+
+input{
+    width:50px;
+    height:50px;
+    background-color: brown;
+    color:white;
+    border:3px solid black;
+    margin:2px;
+    cursor:pointer;
+    font-size: 25px;
+}
+#shownum{
+    background-color: grey;
+    width: 250px;
+    border:3px solid black;
+    padding:20px;
+    margin:auto;
+    border-radius: 4px;
+}
+input:hover{
+    background-color: salmon;
+}
+td{
+    padding:10px;
+
+}
+
+        </style>
+        <script type="text/Javascript">
+            function backspace(){
+var res=document.form1.bs.value;
+document.form1.bs.value=res.substring(0,res.length-1);
+            }
+            </script>
+</head>
+<body style="background-image:url('https://image.slidesdocs.com/responsive-images/background/handdrawn-style-blue-cute-education-math-lovely-powerpoint-background_a698b5341c__960_540.jpg'); background-repeat:no-repeat;background-size:cover;"> <center>
+    <p style=" color: green; font-family: 'Georgia'; font-size: 50px;"><b><i></i>Calculator</i></b></p>
+  <div class="formfrom">
+    
+    <form name="form1" >
+       
+            <table>
+                <tr>
+        <tr><input id="shownum" type="text" name="ans"><br><br></tr>
+          <tr> <td><input type="button"  value="C" onclick="form1.ans.value=''" ></td>
+            <td><input class="bs" type="button" value="B"  onclick="backspace()"></td>
+            <td><input type="button" value="/" onclick="form1.ans.value+='/'"></td>
+            <td><input type="button" value="x" onclick="form1.ans.value+='*'" ></td>
+            
+</tr>
+<tr>
+    <td><input type="button" value="7" onclick="form1.shownum.value+='7'"></td>
+    <td><input type="button" value="8" onclick="form1.ans.value+='8'"></td>
+    <td><input type="button" value="9" onclick="form1.ans.value+='9'"></td>
+    <td><input type="button" value="-" onclick="form1.ans.value+='-'"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="form1.ans.value+='4'"></td>
+        <td><input type="button" value="5" onclick="form1.ans.value+='5'"></td>
+        <td><input type="button" value="6" onclick="form1.ans.value+='6'"></td>
+        <td><input type="button" value="+" onclick="form1.ans.value+='+'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="form1.ans.value+='1'"</td>
+            <td><input type="button" value="2" onclick="form1.ans.value+='2'"></td>
+            <td><input type="button" value="3" onclick="form1.ans.value+='3'"></td>
+            <td rowspan="2"><input type="button" style="height:110px" value="="  onclick="form1.ans.value=eval(form1.ans.value)"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" style="width:120px" value="0" onclick="form1.ans.value+='0'"></td>
+                <td><input type="button" value="." onclick="form1.ans.value+='.'"></td>
+                </tr>
+</table>
+</div> 
+</center>
+</body>
+</html
