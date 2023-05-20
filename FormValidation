@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myform{
+            width:500px;
+            height:420px;
+            margin: auto;
+            border:3px solid black;
+            padding-top: 4px;
+            background-color:lightcyan;
+
+        }
+        </style>
+        <script>
+function validateform(){
+            let name=document.myform.name.value;
+            let password=document.myform.pwd.value;
+            let mail=document.myform.mail.value;
+            let phno=document.myform.num.value;
+            const nameRegex = /^[a-zA-Z\s]+$/
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^\d{10}$/;
+            if(name==''||name==null){
+              alert("name cannnot be empty");
+              return false;
+            }
+            if(!nameRegex.test(name)){
+              alert("Enter a valid name");
+              return false;
+            }
+            if(password.length==0){
+              alert("password cannnot be empty");
+              return false;
+            }
+          if(password.length<6){
+            alert("Enter a valid password");
+            return false;
+          }
+          if(mail==""||mail==null){
+              alert("emaild id cannnot be empty");
+              return false;
+            }
+          
+          if(!emailRegex.test(mail)){
+            alert("Enter a valid emailid");
+            return false;
+          }
+         if(phno==''||phno==null){
+              alert("phone number cannnot be empty");
+              return false;
+            }      
+            if(!phoneRegex.test(phno)){
+            alert("Enter a valid phone number");
+            return false;
+          }
+        }
+          </script>
+          
+</head>
+<body style="background-image:url('bgass.jpeg');">
+  <h1 align="center">My Form</h1> 
+  <center>
+    <div class="myform">
+    <form name="myform" method="post" action="next.html" onsubmit="return validateform()" >
+  <label for="name" style="font-size: 30px;">Name:</label>
+  <input type="text" id="name" name="name" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+  <label for="Reg No" style="font-size: 30px;">Registration No:</label>
+  <input type="text" id="Reg No" name="rno" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+<div><input type="radio" id="cate" name="rad1">
+  <label for="cate" style="font-size: 30px;">Student</label><br></div>
+
+    <div><input type="radio" id="cate1" name="rad1">
+  <label for="cate1" style="font-size: 30px;">Faculty</label><br></div>
+
+
+  <label for="email" style="font-size: 30px;">email:</label>
+  <input type="email" id="email" name="mail" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+  <label for="pswwd" style="font-size: 30px;">Password:</label>
+  <input type="password" id="pswwd" name="pwd" style="border-radius: 10px;border-width: 5px;"><br><br>
+
+  <label for="phno" style="font-size: 30px;">phone no:</label>
+  <input type="text" id="phno" name="num" style="border-radius: 10px;border-width: 5px;"><br><br><br>
+
+  <center><input type="submit" id="submit" style="border-radius: 10px;border-width: 5px; height:35px ;width:100px;" name="sub" value="submit"></center>
+</form>
+</div>
+  </center>
+</body>
+</html>
+
+next.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image:url('https://help.formstack.com/servlet/rtaImage?eid=ka04w0000011cHA&feoid=00N4w00000GLYSh&refid=0EM4w000002HxNh') ; background-repeat: no-repeat; background-size: cover;">
+</body>
+</html>
